@@ -14,6 +14,15 @@ For general code review, code explanation, or public API writing, use a purpose-
 
 ## Installation
 
+### Claude Code plugin
+
+```bash
+claude plugin marketplace add zyyyyynnn/prune-comments
+claude plugin install prune-comments@zyyyyynnn
+```
+
+### Vercel Skills
+
 Install with [Vercel Skills](https://github.com/vercel-labs/skills):
 
 ```bash
@@ -69,7 +78,7 @@ The banner and redundant comment are deleted, the suppression is replaced with a
 
 ## Usage
 
-Invoke with natural language or host shortcuts (`/prune-comments` in Claude Code / Cursor, `$prune-comments` in Codex):
+Invoke with natural language or host shortcuts (`/prune-comments:prune-comments` for the Claude Code plugin, `/prune-comments` for manual Claude Code/Cursor installs, `$prune-comments` in Codex):
 
 - `Audit comments in src/auth/ with prune-comments; report only, without editing.`
 - `Run prune-comments on my current branch diff.`
@@ -78,11 +87,18 @@ Invoke with natural language or host shortcuts (`/prune-comments` in Claude Code
 ## Structure
 
 ```text
-skills/prune-comments/
-├── SKILL.md
-└── references/
-    ├── audit-protocol.md
-    └── language-rules.md
+.
+├── .claude-plugin/
+├── .github/
+├── CONTRIBUTING.md
+├── SECURITY.md
+├── README.md
+└── skills/prune-comments/
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    └── references/
+        ├── audit-protocol.md
+        └── language-rules.md
 ```
 
 The entry file holds the workflow. `audit-protocol.md` defines the inventory used by every run; `language-rules.md` loads when syntax-specific judgment is needed.

@@ -1,0 +1,50 @@
+name: Bug
+description: The skill produced an incorrect result in a real session. One bug per issue.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Installed skill version or repository commit.
+      placeholder: 1.2.0 or a73e20d
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host and installation method
+      description: Agent, host version, and how the skill was installed.
+      placeholder: Claude Code 2.3.1, npx skills
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: Smallest scope and steps that show the bug. Redact private data.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What the skill changed, kept, or reported.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+      description: What should have happened, and which skill rule supports it.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: This issue covers one problem.
+          required: true
+        - label: I searched open and closed issues for a duplicate.
+          required: true

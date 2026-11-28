@@ -1,0 +1,41 @@
+name: Idea
+description: Propose a focused improvement to the skill or its documentation.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What real task or failure mode is not handled well?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the smallest change that solves the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: generality
+    attributes:
+      label: Cross-project applicability
+      description: Explain how this stays language-independent or why a language-specific reference is justified.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification idea
+      description: How would a user or maintainer tell the change works?
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched open and closed issues for a duplicate.
+          required: true
+        - label: This proposal is scoped to the skill rather than a specific consumer project.
+          required: true

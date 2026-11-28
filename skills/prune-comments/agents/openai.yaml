@@ -1,0 +1,3 @@
+interface:
+  display_name: "Prune Comments"
+  short_description: "Audit and prune comments and lint suppressions"

@@ -1,0 +1,15 @@
+{
+  "name": "zyyyyynnn",
+  "owner": {
+    "name": "zyyyyynnn",
+    "url": "https://github.com/zyyyyynnn"
+  },
+  "description": "Agent skills by zyyyyynnn.",
+  "plugins": [
+    {
+      "name": "prune-comments",
+      "source": "./",
+      "category": "engineering"
+    }
+  ]
+}
